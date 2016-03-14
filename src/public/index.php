@@ -98,25 +98,33 @@
           </div>
         </div><!--/.col-xs-12.col-sm-9-->
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <ul class="list-group">
-            <li href="#" class="list-group-item active">Link 1<span class="badge">14</span></li>
-            <li href="#" class="list-group-item">Link 2<span class="badge">14</span></li>
-            <li href="#" class="list-group-item">Link 3<span class="badge">4</span></li>
-            <li href="#" class="list-group-item">Link 4<span class="badge">1</span></li>
-            <li href="#" class="list-group-item">Link 5<span class="badge">12</span></li>
-            <li href="#" class="list-group-item">Link 6<span class="badge">0</span></li>
-            <li href="#" class="list-group-item">Link 7<span class="badge">14</span></li>
-            <li href="#" class="list-group-item">Link 8</li>
-            <li href="#" class="list-group-item">Link 9</li>
-            <li href="#" class="list-group-item">Link 10</li>
-          </ul>
+
+          <?php 
+          echo "<ul class='list-group'>";
+            foreach($listGroup as $item => $badge)
+            {
+              if ($item === "Link 1")
+              {
+                echo "<li href='#' class='list-group-item active'>" .$item. "<span class='badge'>" .$badge. "</span></li>";
+              }
+              elseif($item)
+              {
+                echo "<li href='#' class='list-group-item'>" .$item. "<span class='badge'>" .$badge. "</span></li>";
+              }
+              else
+              {
+                echo "<li href='#' class='list-group-item'>" .$badge. "</li>";
+              }
+            }
+          echo "</ul>";
+          ?>
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
 
       <hr>
 
       <footer>
-        <p>&copy; 2015 Company, Inc.</p>
+        <?php echo $footer; ?>
       </footer>
 
     </div><!--/.container-->

@@ -19,3 +19,18 @@ $panelTableName = array(
 	2 => array("Jacob", "Thornton", "@fat"),
 	3 => array("Larry", "the Bird", "@twitter")
 	);
+
+$listGroup = array(
+	"Link 1" => 14,
+	"Link 2" => 14,
+	"Link 3" => 4,
+	"Link 4" => 1,
+	"Link 5" => 12,
+	"Link 6" => 0,
+	"Link 7" => 14,
+	"Link 8" => "",
+	"Link 9" => "",
+	"Link 10" => ""  
+	);
+
+$footer = "&copy; 2015 Company, Inc.";
